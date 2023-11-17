@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = ({ updateDataArray }) => {
   const onButtonClick = () => {
     const newData = generateRandomArray();
@@ -17,10 +19,12 @@ const Navbar = ({ updateDataArray }) => {
     <div>
       <nav>
         <div id="logo">
-          <img
-            src="https://mma.prnewswire.com/media/1920828/Assiduus_Global_Logo.jpg?p=facebook"
-            alt=""
-          />
+           <Link to="/"> 
+              <img
+                src="https://mma.prnewswire.com/media/1920828/Assiduus_Global_Logo.jpg?p=facebook"
+                alt=""
+              />
+          </Link>
         </div>
 
         <div id="menu">
