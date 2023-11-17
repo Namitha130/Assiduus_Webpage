@@ -1,13 +1,358 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* --------------Nav tag css styling --------------  */
+nav {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+#logo img {
+  width: 200px;
+  height: 100px;
+  padding-left: 50px;
+  padding-top: 30px;
+}
+#menu {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 30px;
+}
+#menu div {
+  display: inline-block;
+  padding-top: 30px;
+  margin: 0px 15px;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#search input {
+  width: 280px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(220, 220, 220, 0.345);
+}
+
+#search i {
+  position: relative;
+  right: 270px;
+  top: 5px;
+  color: rgba(94, 92, 92, 0.708);
+  font-size: 20px;
+}
+#notification i {
+  font-size: 25px;
+  padding-top: 5px;
+}
+#dwn-arrow i {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+#profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-top: -5px;
+}
+
+#Random-data button {
+  width: 180px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #21a87f;
+  font-size: 14px;
+  color: #21a87f;
+  font-weight: bold;
+  text-align: center;
+}
+#Random-data button:hover {
+  color: #07b07d;
+  background-color: #d0f6f76f;
+}
+/* ----------------Aside Css style---------- */
+aside {
+  width: 300px;
+  height: 100vh;
+}
+#aside {
+  width: 100%;
+  margin-top: 60px;
+}
+ul {
+  list-style: none;
+}
+
+li {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: #0a0a0a;
+}
+li button {
+  width: 70%;
+  height: 40px;
+  font-size: 18px;
+  background-color: transparent;
+  text-align: center;
+  border: none;
+}
+li button:hover {
+  border: 2px solid #1bca1b;
+  color: #1bca1b;
+}
+#aside p {
+  display: inline-block;
+  position: relative;
+  top: -5px;
+  left: 10px;
+}
+
+#aside a {
+  text-decoration: none;
+  color: #0a0a0a;
+}
+
+li i {
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+#aside li > a.active {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1bca1b;
+}
+/* ----------------homepage Css style---------- */
+
+.graph-content {
+  width: 1150px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.123);
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 35px 0px 50px 40px;
+  position: relative;
+  left: 300px;
+  bottom: 800px;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+.graph-content div {
+  width: 540px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+}
+
+/* ---------Dashboard CSS Styling----------- */
+
+/* -------------div1---------- */
+#div1 {
+  padding: 15px 0px;
+}
+.div1-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+.div1-nav span p {
+  font-size: 17px;
+  font-weight: bold;
+}
+#div1 hr {
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.347);
+}
+
+#div1 select {
+  width: auto;
+  height: 30px;
+  padding: 3px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* -------------div2---------- */
+#div2 {
+  padding: 15px 0px 5px;
+}
+.div2-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+.title p {
+  display: inline-block;
+}
+.title p {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.invoice button {
+  width: 140px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #d0f6f76f;
+  border: none;
+  font-size: 14px;
+  color: #07b07d;
+  font-weight: bold;
+  text-align: center;
+}
+
+#div2 hr {
+  width: 100%;
+  margin-top: 10px;
+  border: 1px solid rgba(128, 128, 128, 0.347);
+}
+/* ----------------div3 css styling---------- */
+#div3 {
+  height: 250px;
+}
+.div3-nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 15px;
+}
+
+.div3-nav h4 {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.option-box {
+  position: relative;
+  right: 20px;
+}
+
+.option-box h6 {
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
+  right: 25px;
+}
+#div3 .option-box span {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+#div3 hr {
+  border: 1px solid rgba(128, 128, 128, 0.347);
+  margin: 0px;
+}
+
+/* ---------------------div4-------------- */
+#div4 {
+  padding: 20px 0px;
+}
+
+#div4 hr {
+  border: 1px solid rgba(128, 128, 128, 0.347);
+  margin: 15px 0px 8px;
+}
+#div4 span {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0px 20px;
+}
+
+#div4 table {
+  padding: 0px 20px;
+}
+#div4 th,
+#div4 td {
+  text-align: left;
+  padding: 6px;
+  font-size: 15px;
+}
+
+#div4 th {
+  color: rgba(128, 128, 128, 0.532);
+}
+
+#div4 td {
+  color: black;
+  font-weight: bold;
+}
+
+/* -----------------------BarChar --div3------- */
+#div3 .barChart-2 {
+  margin: 20px 0px;
+  height: 200px;
+  padding-top: 5px;
+}
+#div1 .lineChart {
+  margin-top: 20px;
+  height: auto;
+}
+#div2 .graph-bar {
+  margin-top: 20px;
+  height: 200px;
+  padding-top: 5px;
+}
+
+/* -------------------MODAL CSS STYING */
+
+#modal-body {
+  background-color: white;
+  border-radius: 6px;
+  text-align: center;
+  /* border: #1bca1b 1px solid; */
+  border-radius: 20px;
+  padding: 10px 30px 20px;
+}
+
+#modal-body h2 {
+  margin: 10px auto 30px;
+  font-size: 28px;
+}
+
+#modal-body input {
+  margin: 10px 0px;
+  display: block;
+  border: none;
+}
+
+#modal-body button {
+  width: 120px;
+  height: 35px;
+  font-size: 18px;
+  color: white;
+  background-color: #1bca1bf8;
+  border: transparent;
+  border-radius: 10px;
+  float: right;
+  margin: 20px 0px;
 }

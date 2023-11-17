@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Dashboard from "./Components/Dashboard";
+import AsideCom from "./Components/AsideCom";
+import { useState } from "react";
 
 function App() {
+  const [dataArray, setDataArray] = useState([20, 40, 70, 40, 50, 30]);
+  const handleNavrbarButtonClick = (newData) => {
+    setDataArray(newData);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar updateDataArray={handleNavrbarButtonClick} />
+
+        <AsideCom />
+
+        <Routes>
+          <Route path="/" element={<Dashboard dataArray={dataArray} />} />
+          <Route
+            path="/account"
+            element={<Dashboard dataArray={dataArray} />}
+          />
+          <Route
+            path="/payroll"
+            element={<Dashboard dataArray={dataArray} />}
+          />
+          <Route path="/report" element={<Dashboard dataArray={dataArray} />} />
+          <Route
+            path="/advisor"
+            element={<Dashboard dataArray={dataArray} />}
+          />
+          <Route
+            path="/contact"
+            element={<Dashboard dataArray={dataArray} />}
+          />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
