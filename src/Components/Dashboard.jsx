@@ -37,53 +37,10 @@ const Dashboard = ({ dataArray }) => {
     alert("File Uploaded successfully");
   };
 
-  // ! Randomize the data when Data is selected
-  const initialData = [30, 35, 45, 35, 28, 38, 38, 25, 30, 35];
-  const [chartData, setChartData] = useState(initialData);
-
-  function generateRandomData() {
-    return Array.from({ length: 10 }, () => Math.floor(Math.random() * 50));
-  }
-
-  const handleManageChange = () => {
-    const newData = generateRandomData();
-    setChartData(newData);
-  };
-
   return (
     <div className="graph-content">
       <div id="div1">
-        <span className="div1-nav">
-          <span>
-            <p> Checking account</p>
-          </span>
-
-          <span>
-            <select name="manage" onChange={handleManageChange}>
-              <option value="Manage">Manage</option>
-              <option value="Manage">Data</option>
-            </select>
-
-            <select name="months" id="months">
-              <option value="January">January</option>
-              <option value="saabFebruary">February</option>
-              <option value="March">March</option>
-              <option value="April">April</option>
-              <option value="May">May</option>
-              <option value="June">June</option>
-              <option value="July">July</option>
-              <option value="August">August</option>
-              <option value="September">September</option>
-              <option value="October">October</option>
-              <option value="November">November</option>
-              <option value="December">December</option>
-            </select>
-          </span>
-        </span>
-        <hr />
-        <div className="lineChart">
-          <LineChart data={chartData} />
-        </div>
+        <LineChart />
       </div>
 
       <div id="div2">

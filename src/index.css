@@ -165,7 +165,7 @@ li i {
 
 /* -------------div1---------- */
 #div1 {
-  padding: 15px 0px;
+  padding: 20px 0px;
 }
 .div1-nav {
   display: flex;
@@ -180,14 +180,15 @@ li i {
 }
 #div1 hr {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
   border: 1px solid rgba(128, 128, 128, 0.347);
+  margin-bottom: 15px;
 }
 
 #div1 select {
   width: auto;
-  height: 30px;
-  padding: 3px;
+  height: 32px;
+  padding: 5px;
   margin-right: 10px;
   font-size: 14px;
   font-weight: normal;

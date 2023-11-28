@@ -3,8 +3,6 @@ import * as d3 from "d3";
 
 const BarChart = ({ dataArray }) => {
   useEffect(() => {
-    console.log("array of values in BarChart : " + dataArray);
-
     d3.select("#bar-chart-container svg").remove();
 
     // Setting up SVG container
@@ -41,9 +39,7 @@ const BarChart = ({ dataArray }) => {
       .append("rect")
       .attr("x", (d, i) =>
         xScale(
-          ["August", "September", "October", "November", "December", "January"][
-            i
-          ]
+          ["August", "September", "October", "November", "December", "January"][i]
         )
       )
       .attr("y", (d) => 140 - yScale(d))
@@ -63,23 +59,14 @@ const BarChart = ({ dataArray }) => {
         "x",
         (d, i) =>
           xScale(
-            [
-              "August",
-              "September",
-              "October",
-              "November",
-              "December",
-              "January",
-            ][i]
+            ["August","September","October","November","December","January",][i]
           ) +
           xScale.bandwidth() / 4
       )
       .attr("y", 170)
       .text(
         (d, i) =>
-          ["August", "September", "October", "November", "December", "January"][
-            i
-          ]
+          ["August", "September", "October", "November", "December", "January"][i]
       )
       .style("font-weight", "light")
       .style("text-anchor", "middle")

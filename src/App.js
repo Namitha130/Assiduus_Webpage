@@ -15,9 +15,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar updateDataArray={handleNavrbarButtonClick} />
-
         <AsideCom />
-
         <Routes>
           <Route path="/" element={<Dashboard dataArray={dataArray} />} />
           <Route

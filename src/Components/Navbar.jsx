@@ -7,11 +7,12 @@ const Navbar = ({ updateDataArray }) => {
   };
 
   const generateRandomArray = () => {
-    // Generating random values of an array of 5 numbers
+    // Generating random values of an array of 6 numbers
     const newArray = Array.from(
       { length: 6 },
-      () => Math.floor(Math.random() * 100) + 1
+      () => Math.floor(Math.random() * 100)
     );
+    console.log(`newArry is : ${newArray}`);
     return newArray;
   };
 
