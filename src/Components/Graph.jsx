@@ -2,19 +2,15 @@ import React, { useEffect } from "react";
 import * as d3 from "d3";
 
 const Graph = ({ dataArray }) => {
-
   useEffect(() => {
-    // Selecting and remove the previous SVG element
     d3.select("#bar-chart svg").remove();
 
-    // Setting up SVG container
     const svg = d3
       .select("#bar-chart")
       .append("svg")
       .attr("width", 380)
       .attr("height", 200);
 
-    // Creating scale for X-axis with custom labels
     const xDomain = [
       "Older",
       "Jan 01-08",
@@ -24,19 +20,13 @@ const Graph = ({ dataArray }) => {
       "Future",
     ];
 
-    const xScale = d3
-      .scaleBand()
-      .domain(xDomain)
-      .range([0, 400])
-      .padding(0.2);
+    const xScale = d3.scaleBand().domain(xDomain).range([0, 400]).padding(0.2);
 
-    // Creating scale for Y-axis
     const yScale = d3
       .scaleLinear()
       .domain([0, d3.max(dataArray)])
       .range([0, 150]);
 
-    // Adding tooltip to bar chart
     const tooltip = d3
       .select("#bar-chart")
       .append("div")
@@ -58,10 +48,10 @@ const Graph = ({ dataArray }) => {
       const tooltipMessage = `Sales were ${d} in ${xDomain[d3.index]}`;
 
       tooltip
-     
+
         .html(tooltipMessage)
         .style("left", x - tooltipWidth / 2 + "px")
-        .style("top", y - tooltipHeight - 12  + "px");
+        .style("top", y - tooltipHeight - 12 + "px");
     };
 
     svg
@@ -80,7 +70,6 @@ const Graph = ({ dataArray }) => {
       .on("mouseleave", mouseleave)
       .on("mouseover", mouseover);
 
-    // Adding text labels below bars
     svg
       .selectAll("text")
       .data(dataArray)

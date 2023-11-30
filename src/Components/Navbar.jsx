@@ -7,12 +7,10 @@ const Navbar = ({ updateDataArray }) => {
   };
 
   const generateRandomArray = () => {
-    // Generating random values of an array of 6 numbers
-    const newArray = Array.from(
-      { length: 6 },
-      () => Math.floor(Math.random() * 100)
+    //generating 6 random numbers
+    const newArray = Array.from({ length: 6 }, () =>
+      Math.floor(Math.random() * 100)
     );
-    console.log(`newArry is : ${newArray}`);
     return newArray;
   };
 
@@ -20,11 +18,11 @@ const Navbar = ({ updateDataArray }) => {
     <div>
       <nav>
         <div id="logo">
-           <Link to="/"> 
-              <img
-                src="https://mma.prnewswire.com/media/1920828/Assiduus_Global_Logo.jpg?p=facebook"
-                alt=""
-              />
+          <Link to="/">
+            <img
+              src="https://mma.prnewswire.com/media/1920828/Assiduus_Global_Logo.jpg?p=facebook"
+              alt=""
+            />
           </Link>
         </div>
 

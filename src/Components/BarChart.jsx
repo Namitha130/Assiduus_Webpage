@@ -5,14 +5,12 @@ const BarChart = ({ dataArray }) => {
   useEffect(() => {
     d3.select("#bar-chart-container svg").remove();
 
-    // Setting up SVG container
     const svg = d3
       .select("#bar-chart-container")
       .append("svg")
       .attr("width", 400)
       .attr("height", 200);
 
-    // Creating scale for X-axis
     const xScale = d3
       .scaleBand()
       .domain([
@@ -26,7 +24,6 @@ const BarChart = ({ dataArray }) => {
       .range([0, 400])
       .padding(0.1);
 
-    // Creating scale for Y-axis
     const yScale = d3
       .scaleLinear()
       .domain([0, d3.max(dataArray)])
@@ -39,7 +36,9 @@ const BarChart = ({ dataArray }) => {
       .append("rect")
       .attr("x", (d, i) =>
         xScale(
-          ["August", "September", "October", "November", "December", "January"][i]
+          ["August", "September", "October", "November", "December", "January"][
+            i
+          ]
         )
       )
       .attr("y", (d) => 140 - yScale(d))
@@ -49,7 +48,6 @@ const BarChart = ({ dataArray }) => {
       .attr("rx", 5)
       .attr("ry", 5);
 
-    // Adding text labels below bars
     svg
       .selectAll("text")
       .data(dataArray)
@@ -59,21 +57,29 @@ const BarChart = ({ dataArray }) => {
         "x",
         (d, i) =>
           xScale(
-            ["August","September","October","November","December","January",][i]
+            [
+              "August",
+              "September",
+              "October",
+              "November",
+              "December",
+              "January",
+            ][i]
           ) +
           xScale.bandwidth() / 4
       )
       .attr("y", 170)
       .text(
         (d, i) =>
-          ["August", "September", "October", "November", "December", "January"][i]
+          ["August", "September", "October", "November", "December", "January"][
+            i
+          ]
       )
       .style("font-weight", "light")
       .style("text-anchor", "middle")
       .style("font-size", "12px");
 
     function createGradientFill() {
-      // Creating a linear gradient
       const gradient = svg
         .append("defs")
         .append("linearGradient")
@@ -83,7 +89,6 @@ const BarChart = ({ dataArray }) => {
         .attr("x2", "0%")
         .attr("y2", "100%");
 
-      // Adding two stops with different colors
       gradient
         .append("stop")
         .attr("offset", "50%")
