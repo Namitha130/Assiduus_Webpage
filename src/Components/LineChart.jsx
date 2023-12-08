@@ -122,7 +122,7 @@ const LineChart = () => {
           covidData.delta &&
           typeof covidData.delta.confirmed === "number"
         ) {
-          setDelta([...delta, covidData.delta.confirmed]); // If delta.confirmed is a number setDelta is value
+          setDelta([...delta, covidData.delta.confirmed]); 
         } else if (covidData && covidData.total) {
           setDelta([...delta, covidData.total.confirmed]);
         } else {

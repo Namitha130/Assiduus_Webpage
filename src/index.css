@@ -8,6 +8,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 /* --------------Nav tag css styling --------------  */
+
 nav {
   height: 70px;
   display: flex;
@@ -81,7 +82,7 @@ nav {
 /* ----------------Aside Css style---------- */
 aside {
   width: 300px;
-  height: 100vh;
+  height: max-content;
 }
 #aside {
   width: 100%;
@@ -141,6 +142,7 @@ li i {
 /* ----------------homepage Css style---------- */
 
 .graph-content {
+ 
   width: 1150px;
   height: auto;
   background-color: rgba(0, 0, 0, 0.123);
@@ -149,7 +151,7 @@ li i {
   padding: 35px 0px 50px 40px;
   position: relative;
   left: 300px;
-  bottom: 780px;
+  bottom: 420px;
   column-gap: 20px;
   row-gap: 40px;
 }

@@ -34,7 +34,7 @@ const Dashboard = ({ dataArray }) => {
 
   const handleOnSubmit = () => {
     alert("File Uploaded successfully");
-  };
+  }
 
   return (
     <div className="graph-content">
